@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>測試網頁</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f5e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-section">
+        <h1>測試網頁 🚀</h1>
+        <p>這是一個用於基本測試的網頁</p>
+    </div>
+
+    <div class="test-section">
+        <h2>基本功能測試</h2>
+        <ul>
+            <li>HTML 結構 ✔️</li>
+            <li>CSS 樣式 ✔️</li>
+            <li id="js-test">JavaScript 功能 ❓</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>互動測試</h2>
+        <button onclick="showMessage()">點擊測試</button>
+        <button onclick="toggleContent()">顯示/隱藏內容</button>
+        <div id="hiddenContent" class="hidden-content">
+            <p>🎉 成功顯示隱藏內容！</p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>圖片載入測試</h2>
+        <img src="https://picsum.photos/200/100" alt="測試圖片" style="border: 2px solid #ccc">
+        <p>隨機圖片載入測試 (來自 picsum.photos)</p>
+    </div>
+
+    <script>
+        // JavaScript 測試功能
+        document.getElementById('js-test').innerHTML = 'JavaScript 功能 ✔️';
+        
+        function showMessage() {
+            alert('按鈕點擊測試成功！');
+        }
+
+        function toggleContent() {
+            const content = document.getElementById('hiddenContent');
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+    <!-- 頁尾 -->
+    <div class="test-section" style="text-align: center; color: #666;">
+        <p>測試項目包含：</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>HTML5 結構驗證</li>
+            <li>CSS3 樣式測試</li>
+            <li>JavaScript 功能測試</li>
+            <li>圖片載入測試</li>
+            <li>響應式設計測試</li>
+        </ul>
+    </div>
+</body>
+</html>
